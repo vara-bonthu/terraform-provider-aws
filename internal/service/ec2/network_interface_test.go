@@ -15,7 +15,7 @@ import (
 	tfec2 "github.com/hashicorp/terraform-provider-aws/internal/service/ec2"
 )
 
-func TestAccEC2NetworkInterface_ENI_basic(t *testing.T) {
+func TestAccEC2NetworkInterface_basic(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	subnetResourceName := "aws_subnet.test"
@@ -56,7 +56,7 @@ func TestAccEC2NetworkInterface_ENI_basic(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_ipv6(t *testing.T) {
+func TestAccEC2NetworkInterface_ipv6(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -100,7 +100,7 @@ func TestAccEC2NetworkInterface_ENI_ipv6(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_tags(t *testing.T) {
+func TestAccEC2NetworkInterface_tags(t *testing.T) {
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
 	var conf ec2.NetworkInterface
@@ -145,7 +145,7 @@ func TestAccEC2NetworkInterface_ENI_tags(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_ipv6Count(t *testing.T) {
+func TestAccEC2NetworkInterface_ipv6Count(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -193,7 +193,7 @@ func TestAccEC2NetworkInterface_ENI_ipv6Count(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_disappears(t *testing.T) {
+func TestAccEC2NetworkInterface_disappears(t *testing.T) {
 	var networkInterface ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -216,7 +216,7 @@ func TestAccEC2NetworkInterface_ENI_disappears(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_description(t *testing.T) {
+func TestAccEC2NetworkInterface_description(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	subnetResourceName := "aws_subnet.test"
@@ -284,7 +284,7 @@ func TestAccEC2NetworkInterface_ENI_description(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_attachment(t *testing.T) {
+func TestAccEC2NetworkInterface_attachment(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -317,7 +317,7 @@ func TestAccEC2NetworkInterface_ENI_attachment(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_ignoreExternalAttachment(t *testing.T) {
+func TestAccEC2NetworkInterface_ignoreExternalAttachment(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -344,7 +344,7 @@ func TestAccEC2NetworkInterface_ENI_ignoreExternalAttachment(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_sourceDestCheck(t *testing.T) {
+func TestAccEC2NetworkInterface_sourceDestCheck(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
@@ -385,7 +385,7 @@ func TestAccEC2NetworkInterface_ENI_sourceDestCheck(t *testing.T) {
 	})
 }
 
-func TestAccEC2NetworkInterface_ENI_privateIPsCount(t *testing.T) {
+func TestAccEC2NetworkInterface_privateIPsCount(t *testing.T) {
 	var conf ec2.NetworkInterface
 	resourceName := "aws_network_interface.test"
 	rName := sdkacctest.RandomWithPrefix(acctest.ResourcePrefix)
