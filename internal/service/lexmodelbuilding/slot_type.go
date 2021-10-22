@@ -228,11 +228,11 @@ func getLatestLexSlotTypeVersion(conn *lexmodelbuildingservice.LexModelBuildingS
 		}
 
 		for _, slotType := range page.SlotTypes {
-			if *slotType.Version == SlotTypeVersionLatest {
+			if aws.StringValue(slotType.Version) == SlotTypeVersionLatest {
 				continue
 			}
-			if *slotType.Version > version {
-				version = *slotType.Version
+			if aws.StringValue(slotType.Version) > version {
+				version = aws.StringValue(slotType.Version)
 			}
 		}
 

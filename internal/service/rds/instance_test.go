@@ -2716,7 +2716,7 @@ func testAccCheckInstanceAttributes_MSSQL(v *rds.DBInstance, tz string) resource
 
 		rtz := ""
 		if v.Timezone != nil {
-			rtz = *v.Timezone
+			rtz = aws.StringValue(v.Timezone)
 		}
 
 		if tz != rtz {
